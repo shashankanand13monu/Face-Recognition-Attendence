@@ -5,9 +5,9 @@ import face_recognition as fr
 from face_recognition.api import face_locations
 from datetime import datetime
 
-path = "C:\\Users\\KIIT\\Desktop\\Apps\\Face_R_GIT\\face_recognition\\Attendence Project\\Images"
+path = r"C:\Users\KIIT\Desktop\Apps\Face_R_GIT\face_recognition\Face Detection & Attendence\Images"
 images=[]
-face_cascade= cv2.CascadeClassifier('C:\\Users\\KIIT\\Desktop\\Apps\\Face_R_GIT\\face_recognition\\Attendence Project\\haarcascade_frontalface_default.xml')
+face_cascade= cv2.CascadeClassifier(r"C:\Users\KIIT\Desktop\Apps\Face_R_GIT\face_recognition\Face Detection & Attendence\haarcascade_frontalface_default.xml")
 
 classNames= []
 myList = os.listdir(path)
@@ -29,7 +29,7 @@ def findEncoding(images):
     return encodeList
 
 def MarkAttendence(images):
-    with open('C:\\Users\\KIIT\\Desktop\\Apps\Face_R_GIT\\face_recognition\\Attendence Project\\Attendence_Report.csv','r+')as f:
+    with open(r"C:\Users\KIIT\Desktop\Apps\Face_R_GIT\face_recognition\Face Detection & Attendence\Attendence_Report.csv",'r+')as f:
         myDataList= f.readlines()
         nameList=[]
         for line in myDataList:
